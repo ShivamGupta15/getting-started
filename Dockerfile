@@ -4,7 +4,6 @@ FROM python:alpine AS base
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
-seven
 FROM node:12-alpine AS app-base
 WORKDIR /app
 COPY app/package.json app/yarn.lock ./
